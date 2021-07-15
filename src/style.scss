@@ -52,7 +52,10 @@ body {
 		line-height: 1.5em;
 		z-index: 1;
 		max-width:2em;		
-
+		.picture-img{
+			max-width: 1.7em;
+			border-radius:100px;
+		}
 		/*POSITION*/
 		position: absolute;
 		right: 5px;

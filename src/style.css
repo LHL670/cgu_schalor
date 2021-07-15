@@ -57,6 +57,11 @@ body {
   top: 5px;
 }
 
+.chart .picture .picture-img {
+  max-width: 1.7em;
+  border-radius: 100px;
+}
+
 .chart .profile,
 .chart .user-citations {
   font-size: 90%;
