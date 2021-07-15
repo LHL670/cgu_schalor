@@ -1,0 +1,136 @@
+$black: #444;
+$white: #fff;
+$grey: #999;
+$blue: #1E90FF; 
+
+body {
+	background: #f1f1f1;
+	margin-top: 2rem;
+}
+
+/*PEN STYLES*/
+
+.chart {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url("https://north-eng.com.tw/uploads/87941382-ab5c-4422-908c-6301b547a7fc-%E9%95%B7%E5%BA%9A%E5%A4%A7%E5%AD%B8.png");
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: $black;
+	max-width: 375px;
+	margin: 0 auto;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+
+	.H-index {
+		margin-top: 20px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid darken($grey, 1.5);
+		padding-bottom: 15px;
+		position: relative;
+		overflow: hidden;
+		font-size: 94%;
+	}
+	
+	.text-H-index {
+		text-align:center;
+	}
+	
+	.num-H-index {
+		text-align:center;
+		font: 3.5em/.8em "Roboto";
+		font-weight:bold;
+		float: none;
+		overflow: hidden;
+	}
+	.picture {
+		color: $grey;
+		font-size: 2em;
+		line-height: 1.5em;
+		z-index: 1;
+		max-width:2em;		
+
+		/*POSITION*/
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
+
+	.profile,
+	.user-citations {
+		font-size: 90%;
+	}
+
+	.profile {
+		/*POSITION*/
+		position: relative;
+		
+		.name-email {
+			float: left;
+			overflow: hidden;
+			margin-left: 8px;
+			max-width: 210px;
+			width: 65%;
+			position: relative;
+
+			/*TRANSITION*/
+			transition: all .3s ease;
+		}
+		.name {
+			font-family: Roboto;
+			font-weight: bold;
+			font-size: 1.25em;
+			line-height: .9em;
+			cursor: pointer;
+		}
+
+		.email {
+			font-size: .9em;
+			text-transform: capitalize;
+		}
+	}
+
+	.user-citations {
+		float: right;
+		overflow: hidden;
+		margin-top: -1px;
+
+		.citations {
+			float: left;
+			
+			font-family: Roboto;
+			font-weight: bold;
+			font-size: 2.1em;
+			line-height: 1em;
+			margin-right: 5px;
+			margin-top: -5px;
+		}
+
+	}
+
+	@media screen and (min-width: 380px) {
+		.picture {
+			color: $white;
+
+			&:after {
+				background: $black;
+				border-radius: 50%;
+				border: 3px solid $blue;
+				content: "";
+				height: 160px;
+				width: 160px;
+				position: absolute;
+				top: -90px;
+				right: -90px;
+				z-index: -1;
+			}
+		}
+			.name-email {
+				max-width: 235px;
+				width: 100%;
+			}
+		}
+	}

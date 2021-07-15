@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CGU Scholar</title>
+		<link rel="stylesheet" href="style.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css">
+	</head>
+	<body>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+		
+		<div id="chart" class="chart"> 
+	
+			<div id="school-icon" class="school-icon"></div>	
+			<img  id="picture" class="picture" src="https://scholar.google.com/citations/images/avatar_scholar_256.png" alt="picture">
+			
+			<div class="H-index">
+				<h2 id="text-H-index" class="text-H-index">H-index</h2>
+				<div id="num-H-index" class="num-H-index">140</div>
+			</div>
+
+			<div class="profile">
+				<div class="name-email">
+					<div id="name" class="name">Ion Stoica</div>
+					<div id="email" class="email">ca.berkerley.edu</div>
+				</div>
+				<div class="user-citations">
+					<div id="citations" class="citations">124526</div>
+				</div>
+			</div>
+		</div>
+
+		<center>
+			<p>Design Inspired by <a href="http://www.chynodeluxe.com/codepen/img/weather-widget.png" target="_blank">EZ Weather App Skin</a></p>
+			<p>Uses <a href="http://openweathermap.org/" target="_blank">Open Weather Map API</a></p>
+		</center>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="module" src="firebase_config.js"></script>
+		<script src="script.js" type="module"></script>
+		
+	</body>
+</html>
