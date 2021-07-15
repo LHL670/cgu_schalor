@@ -3,7 +3,7 @@ body {
     margin-top: 2rem;
 }
 /*PEN STYLES*/
-.weather-app {
+.cguscholar {
     background: #fff;
     color: #444;
     max-width: 375px;
@@ -15,7 +15,7 @@ body {
     overflow: hidden;
     position: relative;
 }
-.weather-app .date-time {
+.cguscholar .Hindex {
     margin-top: 20px;
     margin-bottom: 15px;
     border-bottom: 1px solid #959595;
@@ -24,27 +24,27 @@ body {
     overflow: hidden;
     font-size: 94%;
 }
-.weather-app .time {
+.cguscholar .h_index {
     font: 5.5em/0.8em "Roboto";
     float: left;
     overflow: hidden;
 }
-.weather-app .time span {
+/*.weather-app .time span {
     font-size: 0.15em;
     font-weight: bold;
     line-height: 1.25em;
     vertical-align: top;
-}
-.weather-app .date {
+}*/
+.cguscholar .word {
     float: left;
     margin-left: 2.25%;
     margin-top: 30px;
 }
-.weather-app .date .day {
+/*.weather-app .date .day {
     font-family: "Roboto";
     font-weight: bold;
-}
-.weather-app .weather-icon {
+}*/
+.cguscholar .picture {
     color: #999;
     font-size: 2.25em;
     line-height: 1.5em;
@@ -54,31 +54,31 @@ body {
     right: 5px;
     top: 5px;
 }
-.weather-app .location-weather, .weather-app .weather-temp {
+.cguscholar .information, .cguscholar .cita {
     font-size: 90%;
 }
-.weather-app .location-weather {
+.cguscholar .information {
    /*POSITION*/
     position: relative;
 }
-.weather-app .location-weather label {
+.cguscholar .information label {
     position: absolute;
     left: -1px;
     top: -5px;
    /*TRANSITION*/
     transition: left 0.3s ease;
 }
-.weather-app .location-weather label.hovered > .set-icon {
+.cguscholar .information label.hovered > .set-icon {
     color: #999;
 }
-.weather-app .location-weather label:hover, .weather-app .location-weather label.hovered {
+.cguscholar .information label:hover, .cguscholar .information label.hovered {
     left: 1px;
 }
-.weather-app .location-weather label:hover ~ .weather-status, .weather-app .location-weather label.hovered ~ .weather-status {
+.cguscholar .information label:hover ~ .status, .cguscholar .information label.hovered ~ .status {
     margin-left: 10px;
     max-width: 208px;
 }
-.weather-app .location-weather .set-icon {
+.cguscholar .information .set-icon {
     color: #959595;
     cursor: pointer;
     font-size: 1.5em;
@@ -88,10 +88,10 @@ body {
    /*TRANSITION*/
     transition: color 0.2s ease;
 }
-.weather-app .location-weather .set-icon:hover {
+.cguscholar .information .set-icon:hover {
     color: #999;
 }
-.weather-app .location-weather .weather-status {
+.cguscholar .information .status {
     float: left;
     overflow: hidden;
     margin-left: 8px;
@@ -101,7 +101,7 @@ body {
    /*TRANSITION*/
     transition: all 0.3s ease;
 }
-.weather-app .location-weather .userCity {
+.cguscholar .information .username {
     border: none;
     box-sizing: border-box;
     border-bottom: 1px solid #1e90ff;
@@ -113,37 +113,37 @@ body {
     position: absolute;
     top: 0;
 }
-.weather-app .location-weather .userCity:focus {
+.cguscholar .information .username:focus {
     outline: none;
     visibility: visible;
 }
-.weather-app .location-weather #xBxHack {
+.cguscholar .information #xBxHack {
     display: none;
 }
-.weather-app .location-weather #xBxHack:checked ~ .userCity {
+.cguscholar .information #xBxHack:checked ~ .username {
     visibility: visible;
 }
-.weather-app .location-weather #xBxHack:checked ~ .city, .weather-app .location-weather #xBxHack:checked ~ .forcast {
+.cguscholar .information #xBxHack:checked ~ .name, .cguscholar .information #xBxHack:checked ~ .email {
     visibility: hidden;
 }
-.weather-app .location-weather .city {
+.cguscholar .information .name {
     font-family: Roboto;
     font-weight: bold;
     font-size: 1.25em;
     line-height: 0.9em;
     cursor: pointer;
 }
-.weather-app .location-weather .forcast {
+.cguscholar .information .email {
     font-size: 0.9em;
     color: #999;
     text-transform: capitalize;
 }
-.weather-app .weather-temp {
+.cguscholar .cita {
     float: right;
     overflow: hidden;
     margin-top: -1px;
 }
-.weather-app .weather-temp .temperature {
+.cguscholar .cita .citations {
     
     float: left;
     font-family: Roboto;
@@ -153,32 +153,32 @@ body {
     margin-right: 5px;
     margin-top: -5px;
 }
-.weather-app .weather-temp .temperature:after {
+.cguscholar .cita .citations:after {
     content: "\00b0";
     font-size: 0.7em;
     font-family: Roboto;
     line-height: 1.25em;
     vertical-align: text-top;
 }
-.weather-app .weather-temp .high-low {
+/*.cguscholar .cita .high-low {
     color: #999;
     font-family: Roboto;
     line-height: 1.2em;
     float: right;
     text-align: right;
-}
-.weather-app .weather-temp .high-low .high:after, .weather-app .weather-temp .high-low .low:after {
+}*/
+/*.weather-app .weather-temp .high-low .high:after, .weather-app .weather-temp .high-low .low:after {
     content: "\00b0";
     font-size: 0.7em;
     font-family: Roboto;
     line-height: 1.25em;
     vertical-align: text-top;
-}
+}*/
 @media screen and (min-width: 380px) {
-    .weather-app .weather-icon {
+    .cguscholar .picture {
         color: #fff;
    }
-    .weather-app .weather-icon:after {
+    .cguscholar .picture:after {
         background: #444;
         border-radius: 50%;
         border: 3px solid #1e90ff;
@@ -190,27 +190,27 @@ body {
         right: -90px;
         z-index: -1;
    }
-    .weather-app .date-time {
+    .cguscholar .Hindex {
         font-size: 100%;
    }
-    .weather-app .location-weather label:hover ~ .weather-status {
+    .cguscholar .information label:hover ~ .status {
         max-width: 233px;
    }
-    .weather-app .location-weather .weather-status {
+    .cguscholar .information .status {
         max-width: 235px;
         width: 100%;
    }
-    .weather-app .high-low .high:before, .weather-app .high-low .low:before {
+    /*.weather-app .high-low .high:before, .weather-app .high-low .low:before {
         font-size: 0.7em;
         font-weight: bold;
         text-transform: uppercase;
         vertical-align: middle;
         text-align: left;
-   }
-    .weather-app .high-low .high:before {
+   }*/
+    /*.weather-app .high-low .high:before {
         content: "high: ";
    }
     .weather-app .high-low .low:before {
         content: "low: ";
-   }
+   }*/
 }

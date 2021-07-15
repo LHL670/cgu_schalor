@@ -1,66 +1,126 @@
 <!--PEN CODE-->
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css"
+  />
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+  ></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>	
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 
-	<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
-	<script>
-	// Your web app's Firebase configuration
-	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-	var firebaseConfig = {
-		apiKey: "AIzaSyBGLQmN66v9ucTjXgctvmzqHC8H85ez_KE",
-		authDomain: "cgusholar.firebaseapp.com",
-		projectId: "cgusholar",
-		storageBucket: "cgusholar.appspot.com",
-		messagingSenderId: "436011084647",
-		appId: "1:436011084647:web:250d127f195857a4af1dc2",
-		measurementId: "G-H1WFVTFTC0"
-	};
-	// Initialize Firebase
-	firebase.initializeApp(firebaseConfig);
-	firebase.analytics();
-	</script>	
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBGLQmN66v9ucTjXgctvmzqHC8H85ez_KE",
+      authDomain: "cgusholar.firebaseapp.com",
+      projectId: "cgusholar",
+      storageBucket: "cgusholar.appspot.com",
+      messagingSenderId: "436011084647",
+      appId: "1:436011084647:web:250d127f195857a4af1dc2",
+      measurementId: "G-H1WFVTFTC0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 
-	<div id="weather-app" class="weather-app">
-		<i id="weather-icon" class="wi wi-fw weather-icon wi-day-sunny"></i>
-		<div class="date-time">
-			<div id="time" class="time">1:30<span>PM</span></div>
-			<div id="date" class="date">
-				<div id="day" class="day">Sun</div>
-				<div id="monDate" class="monDate">Sep 13</div>
-			</div>
-		</div>
+  <script>
+    function getinfo() {
+      db.collection("cguscholar").onSnapshot(function (querySnapshot) {
+        querySnapshot.docs.map((doc) => ({
+          name: doc.data().name,
+          email: doc.data().email,
+          citations: doc.data().citations,
+          h_index: doc.data().h_index,
+          picture: doc.data().picture,
+          school_icon: doc.data().school_icon
+        }))
+      });
+    }
+    getinfo();
+  </script>
 
-		<div class="location-weather">
-			<label for="xBxHack">
-				<i id="set-icon" class="fa set-icon fa-ellipsis-v"></i>
-			</label>
-			<div class="weather-status">
-				<input type="checkbox" id="xBxHack">
-				<div id="city" class="city">San Diego</div>
-				<input id="userCity" class="userCity" type="text" placeholder="Enter City">
-				<div id="forcast" class="forcast">Sky Is Clear</div>
-			</div>
-			<div class="weather-temp">
-				<div id="temperature" class="temperature">84</div>
-				<div class="high-low">
-					<div id="high" class="high">92</div>
-					<div id="low" class="low">79</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<script src="main.js" type="text/javascript"></script>
+  <div id="cguscholar" class="cguscholar">
+    
+    <i id="picture" class="picture"></i>
+    
+    <div class="Hindex">
+      <div id="h_index" class="h_index">140</div>
+      <div id="word" class="word">H-index</div>
+    </div>
+
+    <div class="information">
+      <label for="xBxHack">
+        <i id="set-icon" class="fa set-icon fa-ellipsis-v"></i>
+      </label>
+      <div class="status">
+        <input type="checkbox" id="xBxHack" />
+        <div id="name" class="name">Ion Stoica</div>
+        <input
+          id="username"
+          class="username"
+          type="text"
+          placeholder="Enter Name"
+        />
+        <div id="email" class="email">cs.berkeley.edu</div>
+      </div>
+      <div class="cita">
+        <div id="citations" class="citations">124586</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--div id="weather-app" class="weather-app">
+    <i id="weather-icon" class="wi wi-fw weather-icon wi-day-sunny"></i>
+    <div class="date-time">
+      <div id="time" class="time">140</div>
+      <div id="date" class="date">
+        <div id="monDate" class="monDate">H-index</div>
+      </div>
+    </div>
+
+    <div class="location-weather">
+      <label for="xBxHack">
+        <i id="set-icon" class="fa set-icon fa-ellipsis-v"></i>
+      </label>
+      <div class="weather-status">
+        <input type="checkbox" id="xBxHack" />
+        <div id="city" class="city">Ion Stoica</div>
+        <input
+          id="userCity"
+          class="userCity"
+          type="text"
+          placeholder="Enter City"
+        />
+        <div id="forcast" class="forcast">cs.berkeley.edu</div>
+      </div>
+      <div class="weather-temp">
+        <div id="temperature" class="temperature">124586</div>
+      </div>
+    </div>
+  </div-->
+
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+  <script src="main.js" type="text/javascript"></script>
 </body>
 <!--END PEN CODE-->
