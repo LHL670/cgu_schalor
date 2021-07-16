@@ -1,10 +1,13 @@
 body {
     background: #f1f1f1;
     margin-top: 2rem;
-}
-/*PEN STYLES*/
-.cguscholar {
-    background: #fff;
+  }
+  /*PEN STYLES*/
+  .chart {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url("https://north-eng.com.tw/uploads/87941382-ab5c-4422-908c-6301b547a7fc-%E9%95%B7%E5%BA%9A%E5%A4%A7%E5%AD%B8.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: #444;
     max-width: 375px;
     margin: 0 auto;
@@ -14,8 +17,8 @@ body {
     padding: 10px;
     overflow: hidden;
     position: relative;
-}
-.cguscholar .Hindex {
+  }
+  .chart .H-index {
     margin-top: 20px;
     margin-bottom: 15px;
     border-bottom: 1px solid #959595;
@@ -23,75 +26,41 @@ body {
     position: relative;
     overflow: hidden;
     font-size: 94%;
-}
-.cguscholar .h_index {
-    font: 5.5em/0.8em "Roboto";
-    float: left;
+  }
+  .chart .text-H-index {
+    text-align: center;
+  }
+  .chart .num-H-index {
+    text-align: center;
+    font: 3.5em/0.8em "Roboto";
+    font-weight: bold;
+    float: none;
     overflow: hidden;
-}
-/*.weather-app .time span {
-    font-size: 0.15em;
-    font-weight: bold;
-    line-height: 1.25em;
-    vertical-align: top;
-}*/
-.cguscholar .word {
-    float: left;
-    margin-left: 2.25%;
-    margin-top: 30px;
-}
-/*.weather-app .date .day {
-    font-family: "Roboto";
-    font-weight: bold;
-}*/
-.cguscholar .picture {
+  }
+  .chart .picture {
     color: #999;
-    font-size: 2.25em;
+    font-size: 2em;
     line-height: 1.5em;
     z-index: 1;
+    max-width: 2em;
    /*POSITION*/
     position: absolute;
     right: 5px;
     top: 5px;
-}
-.cguscholar .information, .cguscholar .cita {
+  }
+  .chart .picture .picture-img {
+    max-width: 1.7em;
+    max-height: 1.7em;
+    border-radius: 100px;
+  }
+  .chart .profile, .chart .user-citations {
     font-size: 90%;
-}
-.cguscholar .information {
+  }
+  .chart .profile {
    /*POSITION*/
     position: relative;
-}
-.cguscholar .information label {
-    position: absolute;
-    left: -1px;
-    top: -5px;
-   /*TRANSITION*/
-    transition: left 0.3s ease;
-}
-.cguscholar .information label.hovered > .set-icon {
-    color: #999;
-}
-.cguscholar .information label:hover, .cguscholar .information label.hovered {
-    left: 1px;
-}
-.cguscholar .information label:hover ~ .status, .cguscholar .information label.hovered ~ .status {
-    margin-left: 10px;
-    max-width: 208px;
-}
-.cguscholar .information .set-icon {
-    color: #959595;
-    cursor: pointer;
-    font-size: 1.5em;
-    float: left;
-    line-height: 1.5em;
-    padding: 0 5px 0 0;
-   /*TRANSITION*/
-    transition: color 0.2s ease;
-}
-.cguscholar .information .set-icon:hover {
-    color: #999;
-}
-.cguscholar .information .status {
+  }
+  .chart .profile .name-email {
     float: left;
     overflow: hidden;
     margin-left: 8px;
@@ -100,117 +69,50 @@ body {
     position: relative;
    /*TRANSITION*/
     transition: all 0.3s ease;
-}
-.cguscholar .information .username {
-    border: none;
-    box-sizing: border-box;
-    border-bottom: 1px solid #1e90ff;
-    font-size: 1.25em;
-    padding: 0 0 5px 5px;
-    width: 100%;
-    visibility: hidden;
-   /*POSITION*/
-    position: absolute;
-    top: 0;
-}
-.cguscholar .information .username:focus {
-    outline: none;
-    visibility: visible;
-}
-.cguscholar .information #xBxHack {
-    display: none;
-}
-.cguscholar .information #xBxHack:checked ~ .username {
-    visibility: visible;
-}
-.cguscholar .information #xBxHack:checked ~ .name, .cguscholar .information #xBxHack:checked ~ .email {
-    visibility: hidden;
-}
-.cguscholar .information .name {
+  }
+  .chart .profile .name {
     font-family: Roboto;
     font-weight: bold;
     font-size: 1.25em;
     line-height: 0.9em;
     cursor: pointer;
-}
-.cguscholar .information .email {
+  }
+  .chart .profile .email {
     font-size: 0.9em;
-    color: #999;
     text-transform: capitalize;
-}
-.cguscholar .cita {
+  }
+  .chart .user-citations {
     float: right;
     overflow: hidden;
     margin-top: -1px;
-}
-.cguscholar .cita .citations {
-    
+  }
+  .chart .user-citations .citations {
     float: left;
     font-family: Roboto;
     font-weight: bold;
-    font-size: 2.7em;
-    line-height: 1em;
+    font-size: 2.1em;
+    line-height: 1.5em;
     margin-right: 5px;
     margin-top: -5px;
-}
-.cguscholar .cita .citations:after {
-    content: "\00b0";
-    font-size: 0.7em;
-    font-family: Roboto;
-    line-height: 1.25em;
-    vertical-align: text-top;
-}
-/*.cguscholar .cita .high-low {
-    color: #999;
-    font-family: Roboto;
-    line-height: 1.2em;
-    float: right;
-    text-align: right;
-}*/
-/*.weather-app .weather-temp .high-low .high:after, .weather-app .weather-temp .high-low .low:after {
-    content: "\00b0";
-    font-size: 0.7em;
-    font-family: Roboto;
-    line-height: 1.25em;
-    vertical-align: text-top;
-}*/
-@media screen and (min-width: 380px) {
-    .cguscholar .picture {
-        color: #fff;
+  }
+  @media screen and (min-width: 380px) {
+    .chart .picture {
+      color: #fff;
    }
-    .cguscholar .picture:after {
-        background: #444;
-        border-radius: 50%;
-        border: 3px solid #1e90ff;
-        content: "";
-        height: 160px;
-        width: 160px;
-        position: absolute;
-        top: -90px;
-        right: -90px;
-        z-index: -1;
+    .chart .picture:after {
+      background: #444;
+      border-radius: 50%;
+      border: 3px solid #1e90ff;
+      content: "";
+      height: 160px;
+      width: 160px;
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      z-index: -1;
    }
-    .cguscholar .Hindex {
-        font-size: 100%;
+    .chart .name-email {
+      max-width: 235px;
+      width: 100%;
    }
-    .cguscholar .information label:hover ~ .status {
-        max-width: 233px;
-   }
-    .cguscholar .information .status {
-        max-width: 235px;
-        width: 100%;
-   }
-    /*.weather-app .high-low .high:before, .weather-app .high-low .low:before {
-        font-size: 0.7em;
-        font-weight: bold;
-        text-transform: uppercase;
-        vertical-align: middle;
-        text-align: left;
-   }*/
-    /*.weather-app .high-low .high:before {
-        content: "high: ";
-   }
-    .weather-app .high-low .low:before {
-        content: "low: ";
-   }*/
-}
+  }
