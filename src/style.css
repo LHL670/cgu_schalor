@@ -2,10 +2,8 @@ body {
   background: #f1f1f1;
   margin-top: 2rem;
 }
-
 /*PEN STYLES*/
 .chart {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.74)), to(rgba(255, 255, 255, 0.74))), url("https://north-eng.com.tw/uploads/87941382-ab5c-4422-908c-6301b547a7fc-%E9%95%B7%E5%BA%9A%E5%A4%A7%E5%AD%B8.png");
   background-image: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url("https://north-eng.com.tw/uploads/87941382-ab5c-4422-908c-6301b547a7fc-%E9%95%B7%E5%BA%9A%E5%A4%A7%E5%AD%B8.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -13,16 +11,13 @@ body {
   color: #444;
   max-width: 375px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   overflow: hidden;
   position: relative;
 }
-
 .chart .H-index {
   margin-top: 20px;
   margin-bottom: 15px;
@@ -32,47 +27,47 @@ body {
   overflow: hidden;
   font-size: 94%;
 }
-
 .chart .text-H-index {
   text-align: center;
 }
-
 .chart .num-H-index {
   text-align: center;
-  font: 3.5em/.8em "Roboto";
+  font: 3.5em/0.8em "Roboto";
   font-weight: bold;
   float: none;
   overflow: hidden;
 }
-
 .chart .picture {
   color: #999;
   font-size: 2em;
-  line-height: 2.5em;
+  line-height: 1.5em;
   z-index: 1;
-  max-width: 2.5em;
-  /*POSITION*/
+  max-width: 2em;
+ /*POSITION*/
   position: absolute;
   right: 5px;
   top: 5px;
 }
-
 .chart .picture .picture-img {
-  max-width: 1.7em;
-  max-height: 1.7em;
-  border-radius: 100px;
+  position: absolute;
+  right: -4.5px;
+  top: -4.5px;
+  width: 2em;
+  height: 2em;
+  min-width: 2.5em;
+  min-height: 2.5em;
+  max-width: 4.0em;
+  max-height: 4.0em;
+  object-fit: cover;
+  border-radius:0 0 0 100%;
 }
-
-.chart .profile,
-.chart .user-citations {
+.chart .profile, .chart .user-citations {
   font-size: 90%;
 }
-
 .chart .profile {
-  /*POSITION*/
+ /*POSITION*/
   position: relative;
 }
-
 .chart .profile .name-email {
   float: left;
   overflow: hidden;
@@ -80,30 +75,25 @@ body {
   max-width: 210px;
   width: 65%;
   position: relative;
-  /*TRANSITION*/
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+ /*TRANSITION*/
+  transition: all 0.3s ease;
 }
-
 .chart .profile .name {
   font-family: Roboto;
   font-weight: bold;
   font-size: 1.25em;
-  line-height: .9em;
+  line-height: 0.9em;
   cursor: pointer;
 }
-
 .chart .profile .email {
-  font-size: .9em;
+  font-size: 0.9em;
   text-transform: capitalize;
 }
-
 .chart .user-citations {
   float: right;
   overflow: hidden;
   margin-top: -1px;
 }
-
 .chart .user-citations .citations {
   float: left;
   font-family: Roboto;
@@ -113,26 +103,23 @@ body {
   margin-right: 5px;
   margin-top: -5px;
 }
-
 @media screen and (min-width: 380px) {
   .chart .picture {
     color: #fff;
-  }
-  .chart .picture:after {
-    background: #444;
+ }
+  .chart #picture::after {
+    background: var(--check-secondary, #fff);
     border-radius: 50%;
-    border: 3px solid #1E90FF;
     content: "";
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     position: absolute;
     top: -90px;
     right: -90px;
     z-index: -1;
-  }
+ }
   .chart .name-email {
     max-width: 235px;
     width: 100%;
-  }
+ }
 }
-/*# sourceMappingURL=style.css.map */
