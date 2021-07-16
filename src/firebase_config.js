@@ -1,5 +1,6 @@
+import firebase from "firebase";
 
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyBGLQmN66v9ucTjXgctvmzqHC8H85ez_KE",
     authDomain: "cgusholar.firebaseapp.com",
     projectId: "cgusholar",
@@ -10,8 +11,7 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-const db=firebase.firestore();
 
-console.log('firebase_config');
+const db=firebase.firestore();
 
 export {db};
