@@ -1,4 +1,45 @@
-import {db} from './firebase_config.js';
+function returnSchalor(doc){
+	
+	console.log(doc.data());
+	this.num_H_index = $("#num-H-index");
+	this.num_H_index.html(doc.data().h_index);
+	this.scholar_name=$("#scholar_name");
+	this.scholar_name.html(doc.data().name);
+	this.email=$("#email");
+	this.email.html(doc.data().email);
+	this.citations=$("#citations");
+	this.citations.html(doc.data().citations);
+	document.getElementById('picture-img').src=doc.data().picture;
+
+	let school_icon=doc.data().school_icon;
+	//console.log(school_icon);
+	document.getElementById('chart').style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),url('+school_icon+')';
+
+}
+
+var firebaseConfig = {
+apiKey: "AIzaSyBGLQmN66v9ucTjXgctvmzqHC8H85ez_KE",
+authDomain: "cgusholar.firebaseapp.com",
+projectId: "cgusholar",
+storageBucket: "cgusholar.appspot.com",
+messagingSenderId: "436011084647",
+appId: "1:436011084647:web:250d127f195857a4af1dc2",
+measurementId: "G-H1WFVTFTC0"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db=firebase.firestore();
+//console.log(db);
+
+db.collection('cguscholar').where('name','==','Jeffrey M. Wooldridge').get().then(snapshot => {
+snapshot.docs.forEach(doc => {
+	//console.log(doc.data());
+	returnSchalor(doc);
+});
+});
+
+
+/*import {db} from './firebase_config.js';
 
 var cguScholar = (function() {
 	"use strict";
@@ -105,4 +146,4 @@ var cguScholar = (function() {
 	return {
 		time_of_day: owm.weat_icon_class
 	};
-})();
+})(); */
