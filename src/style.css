@@ -49,9 +49,17 @@ body {
   top: 5px;
 }
 .chart .picture .picture-img {
-  max-width: 1.7em;
-  max-height: 1.7em;
-  border-radius: 100px;
+  position: absolute;
+  right: -4.5px;
+  top: -4.5px;
+  width: 2em;
+  height: 2em;
+  min-width: 2.5em;
+  min-height: 2.5em;
+  max-width: 4.0em;
+  max-height: 4.0em;
+  object-fit: cover;
+  border-radius:0 0 0 100%;
 }
 .chart .profile, .chart .user-citations {
   font-size: 90%;
@@ -99,13 +107,12 @@ body {
   .chart .picture {
     color: #fff;
  }
-  .chart .picture:after {
-    background: #444;
+  .chart #picture::after {
+    background: var(--check-secondary, #fff);
     border-radius: 50%;
-    border: 3px solid #1e90ff;
     content: "";
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     position: absolute;
     top: -90px;
     right: -90px;
