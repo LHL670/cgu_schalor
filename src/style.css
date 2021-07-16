@@ -40,21 +40,15 @@ body {
 .chart .picture {
   color: #999;
   font-size: 2em;
-  line-height: 2.5em;
+  line-height: 1.5em;
   z-index: 1;
-<<<<<<< HEAD
   max-width: 2em;
  /*POSITION*/
-=======
-  max-width: 2.5em;
-  /*POSITION*/
->>>>>>> dd32f610de91ecf909df1f00d99a8974c77d527f
   position: absolute;
   right: 5px;
   top: 5px;
 }
 .chart .picture .picture-img {
-<<<<<<< HEAD
   position: absolute;
   right: -4.5px;
   top: -4.5px;
@@ -66,11 +60,6 @@ body {
   max-height: 4.0em;
   object-fit: cover;
   border-radius:0 0 0 100%;
-=======
-  max-width: 1.7em;
-  max-height: 1.7em;
-  border-radius: 100px;
->>>>>>> dd32f610de91ecf909df1f00d99a8974c77d527f
 }
 .chart .profile, .chart .user-citations {
   font-size: 90%;
