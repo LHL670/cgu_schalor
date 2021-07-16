@@ -49,11 +49,12 @@ body {
 	.picture {
 		color: $grey;
 		font-size: 2em;
-		line-height: 1.5em;
+		line-height: 2.5em;
 		z-index: 1;
-		max-width:2em;		
+		max-width:2.5em;		
 		.picture-img{
 			max-width: 1.7em;
+			max-height: 1.7em;
 			border-radius:100px;
 		}
 		/*POSITION*/
@@ -107,7 +108,7 @@ body {
 			font-family: Roboto;
 			font-weight: bold;
 			font-size: 2.1em;
-			line-height: 1em;
+			line-height: 1.5em;
 			margin-right: 5px;
 			margin-top: -5px;
 		}
