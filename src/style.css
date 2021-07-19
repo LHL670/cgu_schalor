@@ -50,8 +50,8 @@ body {
 }
 .chart .picture .picture-img {
   position: absolute;
-  right: -4.5px;
-  top: -4.5px;
+  right: -5px;
+  top: -4.2px;
   width: 2em;
   height: 2em;
   min-width: 2.5em;
@@ -122,4 +122,8 @@ body {
     max-width: 235px;
     width: 100%;
  }
+}
+a{
+   text-decoration:none;
+    color: #444;
 }
