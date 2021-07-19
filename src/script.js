@@ -1,10 +1,13 @@
 function returnSchalor(doc){
 	
-	//console.log(doc.data());
+	console.log(doc.data());
 	this.num_H_index = $("#num-H-index");
 	this.num_H_index.html(doc.data().h_index);
 	this.scholar_name=$("#scholar_name");
 	this.scholar_name.html(doc.data().name);
+	const s_id=doc.data().id;
+
+	document.getElementById('name-email').href='https://scholar.google.ca/citations?user='+s_id+'';
 	this.email=$("#email");
 	this.email.html(doc.data().email);
 	this.citations=$("#citations");
@@ -14,42 +17,41 @@ function returnSchalor(doc){
 	let school_icon=doc.data().school_icon;
 	//console.log(school_icon);
 	document.getElementById('chart').style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),url('+school_icon+')';
-	
-	const citationsColor = document.getElementById("picture");
-	const citation_num=doc.data().citations;
-	console.log(citation_num);
-	
-	if(citation_num<=10){
-		citationsColor.style.setProperty("--check-secondary", "#FF0000");
-	}
-	else if(11<=citation_num&&citation_num<=99){
-		citationsColor.style.setProperty("--check-secondary", "#FF5809");
-	}
-	else if(100<=citation_num&&citation_num<=999){
-		citationsColor.style.setProperty("--check-secondary", "#FFDC35");
-	}
-	else if(1000<=citation_num&&citation_num<=9999){
-		citationsColor.style.setProperty("--check-secondary", "#00A600");
-	}
-	else if(10000<=citation_num&&citation_num<=99999){
-		citationsColor.style.setProperty("--check-secondary", "#2894FF");
-	}
-	else if(100000<=citation_num&&citation_num<=999999){
-		citationsColor.style.setProperty("--check-secondary", "#000093");
-	}
-	else {
-		citationsColor.style.setProperty("--check-secondary", "#921AFF");
-	}
-	//citationsColor.style.setProperty("--check-secondary", "#fff");
-	//console.log(window.getComputedStyle(picture,'::after'));
-	//pictureColor=window.getComputedStyle(picture,'::after').background='red';
-	//pictureC=document.getElementById('picture')
-	//console.log(pictureC);
-	//var c = pictureC.sheet;
-	//pictureC.insertRule("#pictur#picture::after{background-color:black;}", 0);
-	//c.insertRule("#d#d::before{color:blue;}", 0);
-	//p.style.background='red';
-	//document.getElementById('picture').style.after.backgroundColor='red';
+const citationsColor = document.getElementById("picture");
+const citation_num=doc.data().citations;
+console.log(citation_num);
+if(citation_num<=10){
+	citationsColor.style.setProperty("--check-secondary", "#FF0000");
+}
+else if(11<=citation_num&&citation_num<=99){
+
+	citationsColor.style.setProperty("--check-secondary", "#FF5809");
+}
+else if(100<=citation_num&&citation_num<=999){
+	citationsColor.style.setProperty("--check-secondary", "#FFDC35");
+}
+else if(1000<=citation_num&&citation_num<=9999){
+	citationsColor.style.setProperty("--check-secondary", "#00A600");
+}
+else if(10000<=citation_num&&citation_num<=99999){
+	citationsColor.style.setProperty("--check-secondary", "#2894FF");
+}
+else if(100000<=citation_num&&citation_num<=999999){
+	citationsColor.style.setProperty("--check-secondary", "#000093");
+}
+else {
+	citationsColor.style.setProperty("--check-secondary", "#921AFF");
+}
+//citationsColor.style.setProperty("--check-secondary", "#fff");
+//console.log(window.getComputedStyle(picture,'::after'));
+//pictureColor=window.getComputedStyle(picture,'::after').background='red';
+//pictureC=document.getElementById('picture')
+//console.log(pictureC);
+//var c = pictureC.sheet;
+//pictureC.insertRule("#pictur#picture::after{background-color:black;}", 0);
+//c.insertRule("#d#d::before{color:blue;}", 0);
+//p.style.background='red';
+//document.getElementById('picture').style.after.backgroundColor='red';
 }
 
 var firebaseConfig = {
